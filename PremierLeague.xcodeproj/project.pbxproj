@@ -3,16 +3,22 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E25902E26919A8F00F4CA09 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E25902D26919A8F00F4CA09 /* AboutView.swift */; };
 		3E3000CA2688BD950021B2F4 /* PremierLeagueApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3000C92688BD950021B2F4 /* PremierLeagueApp.swift */; };
 		3E3000CC2688BD950021B2F4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3000CB2688BD950021B2F4 /* ContentView.swift */; };
 		3E3000CE2688BD960021B2F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E3000CD2688BD960021B2F4 /* Assets.xcassets */; };
 		3E3000D12688BD960021B2F4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E3000D02688BD960021B2F4 /* Preview Assets.xcassets */; };
 		3E3000DC2688BD960021B2F4 /* PremierLeagueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3000DB2688BD960021B2F4 /* PremierLeagueTests.swift */; };
 		3E3000E72688BD960021B2F4 /* PremierLeagueUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3000E62688BD960021B2F4 /* PremierLeagueUITests.swift */; };
+		3E3000F52688C2750021B2F4 /* ClubModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3000F42688C2740021B2F4 /* ClubModel.swift */; };
+		3E3000F72688C38B0021B2F4 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3000F62688C38B0021B2F4 /* NetworkManager.swift */; };
+		3E3000FA2688CCDB0021B2F4 /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = 3E3000F92688CCDB0021B2F4 /* URLImage */; };
+		3E3CDF7E268B639A0048AB82 /* ClubDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3CDF7D268B639A0048AB82 /* ClubDetailView.swift */; };
+		3E3CDF80268B67100048AB82 /* ClubRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3CDF7F268B67100048AB82 /* ClubRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3E25902D26919A8F00F4CA09 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		3E3000C62688BD950021B2F4 /* PremierLeague.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PremierLeague.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E3000C92688BD950021B2F4 /* PremierLeagueApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremierLeagueApp.swift; sourceTree = "<group>"; };
 		3E3000CB2688BD950021B2F4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -45,6 +52,10 @@
 		3E3000E22688BD960021B2F4 /* PremierLeagueUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PremierLeagueUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E3000E62688BD960021B2F4 /* PremierLeagueUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremierLeagueUITests.swift; sourceTree = "<group>"; };
 		3E3000E82688BD960021B2F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3E3000F42688C2740021B2F4 /* ClubModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubModel.swift; sourceTree = "<group>"; };
+		3E3000F62688C38B0021B2F4 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		3E3CDF7D268B639A0048AB82 /* ClubDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubDetailView.swift; sourceTree = "<group>"; };
+		3E3CDF7F268B67100048AB82 /* ClubRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E3000FA2688CCDB0021B2F4 /* URLImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,8 +107,10 @@
 		3E3000C82688BD950021B2F4 /* PremierLeague */ = {
 			isa = PBXGroup;
 			children = (
+				3E3CDF7C268B63540048AB82 /* View */,
+				3E3CDF7B268B63420048AB82 /* Model */,
+				3E3CDF7A268B63310048AB82 /* Network */,
 				3E3000C92688BD950021B2F4 /* PremierLeagueApp.swift */,
-				3E3000CB2688BD950021B2F4 /* ContentView.swift */,
 				3E3000CD2688BD960021B2F4 /* Assets.xcassets */,
 				3E3000D22688BD960021B2F4 /* Info.plist */,
 				3E3000CF2688BD960021B2F4 /* Preview Content */,
@@ -130,6 +144,33 @@
 			path = PremierLeagueUITests;
 			sourceTree = "<group>";
 		};
+		3E3CDF7A268B63310048AB82 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				3E3000F62688C38B0021B2F4 /* NetworkManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		3E3CDF7B268B63420048AB82 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3E3000F42688C2740021B2F4 /* ClubModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3E3CDF7C268B63540048AB82 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3E3000CB2688BD950021B2F4 /* ContentView.swift */,
+				3E3CDF7D268B639A0048AB82 /* ClubDetailView.swift */,
+				3E3CDF7F268B67100048AB82 /* ClubRow.swift */,
+				3E25902D26919A8F00F4CA09 /* AboutView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -146,6 +187,9 @@
 			dependencies = (
 			);
 			name = PremierLeague;
+			packageProductDependencies = (
+				3E3000F92688CCDB0021B2F4 /* URLImage */,
+			);
 			productName = PremierLeague;
 			productReference = 3E3000C62688BD950021B2F4 /* PremierLeague.app */;
 			productType = "com.apple.product-type.application";
@@ -217,6 +261,9 @@
 				Base,
 			);
 			mainGroup = 3E3000BD2688BD950021B2F4;
+			packageReferences = (
+				3E3000F82688CCDB0021B2F4 /* XCRemoteSwiftPackageReference "url-image" */,
+			);
 			productRefGroup = 3E3000C72688BD950021B2F4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -259,7 +306,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E3CDF7E268B639A0048AB82 /* ClubDetailView.swift in Sources */,
+				3E25902E26919A8F00F4CA09 /* AboutView.swift in Sources */,
+				3E3000F72688C38B0021B2F4 /* NetworkManager.swift in Sources */,
+				3E3000F52688C2750021B2F4 /* ClubModel.swift in Sources */,
 				3E3000CC2688BD950021B2F4 /* ContentView.swift in Sources */,
+				3E3CDF80268B67100048AB82 /* ClubRow.swift in Sources */,
 				3E3000CA2688BD950021B2F4 /* PremierLeagueApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -580,6 +632,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3E3000F82688CCDB0021B2F4 /* XCRemoteSwiftPackageReference "url-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dmytro-anokhin/url-image";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3E3000F92688CCDB0021B2F4 /* URLImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3E3000F82688CCDB0021B2F4 /* XCRemoteSwiftPackageReference "url-image" */;
+			productName = URLImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3E3000BE2688BD950021B2F4 /* Project object */;
 }

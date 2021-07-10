@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import URLImage
 
 struct ContentView: View {
     @ObservedObject var networkManager = NetworkManager()
@@ -14,14 +13,18 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             List(networkManager.clubs.teams, id: \.idTeam) { club in
-                HStack {
-                    URLImage(URL(string: club.strTeamBadge)!) { image in
-                        image.resizable().frame(width: 60, height: 60).aspectRatio(contentMode: .fit)
-                    }
-                    Text(club.strTeam).padding(.leading, 10)
-                }.padding(.top, 10).padding(.bottom, 10)
+                NavigationLink(destination: ClubDetailView(club: club)) {
+                    ClubRow(club: club)
+                }
             }
             .navigationTitle("Premier League")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    NavigationLink(destination: AboutView()) {
+                        Button("About") {}
+                    }
+                }
+            }
         }
     }
 }
